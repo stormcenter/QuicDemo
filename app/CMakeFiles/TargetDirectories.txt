@@ -1,0 +1,3 @@
+/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles/edit_cache.dir
+/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles/rebuild_cache.dir
+/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles/neteasenet.dir

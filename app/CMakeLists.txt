@@ -15,53 +15,39 @@ cmake_minimum_required(VERSION 3.4.1)
 # default, you only need to specify the name of the public NDK library
 # you want to add. CMake verifies that the library exists before
 # completing its build.
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBORINGSSL_SHARED_LIBRARY")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGOOGLE_PROTOBUF_NO_RTTI")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPROTOBUF_USE_DLLS")
 add_library( chromium_base
              SHARED
              IMPORTED )
-set_target_properties( # Specifies the target library.
-                       chromium_base
 
-                       # Specifies the parameter you want to define.
+set_target_properties( chromium_base
                        PROPERTIES IMPORTED_LOCATION
-
-                       # Provides the path to the library you want to import.
                        ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libbase.cr.so )
+
 add_library( chromium_url
              SHARED
              IMPORTED )
 
-set_target_properties( # Specifies the target library.
-                       chromium_url
-
-                       # Specifies the parameter you want to define.
+set_target_properties( chromium_url
                        PROPERTIES IMPORTED_LOCATION
-
-                       # Provides the path to the library you want to import.
                        ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/liburl.cr.so )
 
 add_library( chromium_net
              SHARED
              IMPORTED )
 
-set_target_properties( # Specifies the target library.
-                       chromium_net
-
-                       # Specifies the parameter you want to define.
+set_target_properties( chromium_net
                        PROPERTIES IMPORTED_LOCATION
-
-                       # Provides the path to the library you want to import.
                        ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libnet.cr.so )
 
-add_library( # Sets the name of the library.
-             neteasenet
-
-             # Sets the library as a shared library.
+add_library( neteasenet
              SHARED
-
-             # Provides a relative path to your source file(s).
-             src/main/jni/src/NetJni.cpp )
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/NetJni.cpp )
 
 
 target_include_directories(neteasenet PRIVATE
