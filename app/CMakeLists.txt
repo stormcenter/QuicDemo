@@ -112,5 +112,6 @@ target_link_libraries( neteasenet
                        protobuf
                        boringssl
                        android
+                       ndk-helper
                        log
                        z)

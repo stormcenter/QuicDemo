@@ -158,7 +158,7 @@ class BASE_EXPORT MessageLoop : public MessagePump::Delegate,
   // Construct a Closure that will call QuitWhenIdle(). Useful to schedule an
   // arbitrary MessageLoop to QuitWhenIdle.
   static Closure QuitWhenIdleClosure();
-    QuitWhenIdle
+
   // Set the timer slack for this message loop.
   void SetTimerSlack(TimerSlack timer_slack) {
     pump_->SetTimerSlack(timer_slack);

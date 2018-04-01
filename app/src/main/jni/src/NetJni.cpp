@@ -3,7 +3,8 @@
 //
 #include <stdio.h>
 #include "net/base/network_delegate_impl.h"
-#include "jni.h"
+#include <jni.h>
+#include <android/log.h>
 #include "base/at_exit.h"
 #include "base/json/json_writer.h"
 #include "base/message_loop/message_loop.h"
@@ -12,14 +13,25 @@
 #include "base/values.h"
 #include "net/http/http_response_headers.h"
 #include "net/proxy_resolution/proxy_config_service_fixed.h"
+#include "net/proxy_resolution/proxy_config.h"
 #include "net/url_request/url_fetcher.h"
 #include "net/url_request/url_fetcher_delegate.h"
 #include "net/url_request/url_request_context.h"
 #include "net/url_request/url_request_context_builder.h"
 #include "net/url_request/url_request_context_getter.h"
 #include "net/url_request/url_request.h"
-#include "JNIHelper.h"
 #define TAG "NetUtils"
+
+#define LOGI(...) \
+  ((void)__android_log_print(ANDROID_LOG_INFO, TAG, __VA_ARGS__))
+
+#define LOGE(...) \
+  ((void)__android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__))
+
+#define LOGW(...) \
+  ((void)__android_log_print(ANDROID_LOG_WARN, TAG, __VA_ARGS__))
+
+
 // Simply quits the current message loop when finished.  Used to make
 // URLFetcher synchronous.
 class QuitDelegate : public net::URLFetcherDelegate {
@@ -29,7 +41,7 @@ public:
     // net::URLFetcherDelegate implementation.
     void OnURLFetchComplete(const net::URLFetcher* source) override {
         LOGE("OnURLFetchComplete");
-        base::MessageLoop::current()->QuitWhenIdle();
+        base::MessageLoop::current()->QuitWhenIdleClosure();
         int responseCode = source->GetResponseCode();
         const net::URLRequestStatus status = source->GetStatus();
         if (status.status() != net::URLRequestStatus::SUCCESS) {
@@ -56,11 +68,7 @@ public:
              source->GetResponseCode(),
              responseStr.c_str());
     }
-    void OnURLFetchDownloadProgress(const net::URLFetcher* source,
-                                    int64_t current,
-                                    int64_t total) override {
-        LOGE("OnURLFetchDownloadProgress");
-    }
+
     void OnURLFetchUploadProgress(const net::URLFetcher* source,
                                   int64_t current,
                                   int64_t total) override {
@@ -69,36 +77,7 @@ public:
 private:
     DISALLOW_COPY_AND_ASSIGN(QuitDelegate);
 };
-// NetLog::ThreadSafeObserver implementation that simply prints events
-// to the logs.
-class PrintingLogObserver : public net::NetLog::ThreadSafeObserver {
-public:
-    PrintingLogObserver() {}
-    ~PrintingLogObserver() override {
-        // This is guaranteed to be safe as this program is single threaded.
-        net_log()->DeprecatedRemoveObserver(this);
-    }
-    // NetLog::ThreadSafeObserver implementation:
-    void OnAddEntry(const net::NetLog::Entry& entry) override {
-        // The log level of the entry is unknown, so just assume it maps
-        // to VLOG(1).
-        const char* const source_type = net::NetLog::SourceTypeToString(entry.source().type);
-        const char* const event_type = net::NetLog::EventTypeToString(entry.type());
-        const char* const event_phase = net::NetLog::EventPhaseToString(entry.phase());
-        std::unique_ptr<base::Value> params(entry.ParametersToValue());
-        std::string params_str;
-        if (params.get()) {
-            base::JSONWriter::Write(*params, &params_str);
-            params_str.insert(0, ": ");
-        }
-#ifdef DEBUG_ALL
-        LOGI("source_type = %s (id = %u): entry_type = %s : event_phase = %s params_str = %s",
-             source_type, entry.source().id, event_type, event_phase, params_str.c_str());
-#endif
-    }
-private:
-    DISALLOW_COPY_AND_ASSIGN(PrintingLogObserver);
-};
+
 // Builds a URLRequestContext assuming there's only a single loop.
 static std::unique_ptr<net::URLRequestContext> BuildURLRequestContext(net::NetLog *net_log) {
     net::URLRequestContextBuilder builder;
@@ -109,7 +88,7 @@ static std::unique_ptr<net::URLRequestContext> BuildURLRequestContext(net::NetLo
     //
     // TODO(akalin): Remove this once http://crbug.com/146421 is fixed.
     builder.set_proxy_config_service(
-            base::WrapUnique(new net::ProxyConfigServiceFixed(net::ProxyConfig())));
+            base::WrapUnique(new net::ProxyConfigServiceFixed(net::ProxyConfigWithAnnotation::CreateDirect())));
 //#endif
     std::unique_ptr<net::URLRequestContext> context(builder.Build());
     context->set_net_log(net_log);
@@ -147,7 +126,7 @@ static void NetUtils_nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
                                                     main_loop.task_runner()));
     fetcher->Start();
     // |delegate| quits |main_loop| when the request is done.
-    main_loop.Run();
+    main_loop.Run(true);
     env->ReleaseStringUTFChars(javaUrl, native_url);
 }
 int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMethod *nativeMethods, jint nMethods) {
@@ -162,7 +141,7 @@ int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMe
     return JNI_TRUE;
 }
 static JNINativeMethod gNetUtilsMethods[] = {
-        NATIVE_METHOD(NetUtils, nativeSendRequest, "(Ljava/lang/String;)V"),
+        NATIVE_METHOD("NetUtils", "nativeSendRequest", "(Ljava/lang/String;)V"),
 };
 void register_com_netease_volleydemo_NetUtils(JNIEnv* env) {
     jniRegisterNativeMethods(env, "com/example/zhangchi09/myapplication/NetUtils",
