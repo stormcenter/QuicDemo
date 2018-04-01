@@ -59,7 +59,7 @@
 
 #include <sys/types.h>
 
-#include <openssl/base.h>
+#include "base.h"
 
 #if defined(__cplusplus)
 extern "C" {

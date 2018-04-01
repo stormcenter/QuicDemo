@@ -59,7 +59,7 @@
 #ifndef OPENSSL_HEADER_NID_H
 #define OPENSSL_HEADER_NID_H
 
-#include <openssl/base.h>
+#include "base.h"
 
 #if defined(__cplusplus)
 extern "C" {

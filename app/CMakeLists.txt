@@ -21,6 +21,40 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBORINGSSL_SHARED_LIBRARY")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGOOGLE_PROTOBUF_NO_RTTI")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPROTOBUF_USE_DLLS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DV8_DEPRECATION_WARNINGS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DENABLE_NOTIFICATIONS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DENABLE_BROWSER_CDMS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DENABLE_PRINTING=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DENABLE_BASIC_PRINTING=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DENABLE_SPELLCHECK=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_BROWSER_SPELLCHECKER=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_OPENSSL_CERTS=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNO_TCMALLOC")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_EXTERNAL_POPUP_MENU=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DDISABLE_NACL")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DENABLE_SUPERVISED_USERS=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DCHROMIUM_BUILD")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_FILE_OFFSET_BITS=64")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DDANDROID")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_SYS_UIO_H")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__STDC_CONSTANT_MACROS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__STDC_FORMAT_MACROS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_FORTIFY_SOURCE=2")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DCOMPONENT_BUILD")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__GNU_SOURCE=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_DEBUG")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DDYNAMIC_ANNOTATIONS_ENABLED=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DWTF_USE_DYNAMIC_ANNOTATIONS=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DDLOPEN_KERBEROS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNET_IMPLEMENTATION")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_KERBEROS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DENABLE_BUILT_IN_DNS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPOSIX_AVOID_MMAP")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DENABLE_WEBSOCKETS")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_PTHREAD")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DU_USING_ICU_NAMESPACE=0")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DU_ENABLE_DYLOAD=0")
+
 add_library( chromium_base
              SHARED
              IMPORTED )
@@ -45,18 +79,38 @@ set_target_properties( chromium_net
                        PROPERTIES IMPORTED_LOCATION
                        ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libnet.cr.so )
 
+add_library( protobuf
+             SHARED
+             IMPORTED )
+
+set_target_properties( protobuf
+                       PROPERTIES IMPORTED_LOCATION
+                       ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libprotobuf_lite.cr.so )
+
+add_library( boringssl
+             SHARED
+             IMPORTED )
+
+set_target_properties( boringssl
+                       PROPERTIES IMPORTED_LOCATION
+                       ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libboringssl.cr.so )                   
+
+
 add_library( neteasenet
              SHARED
              ${PROJECT_SOURCE_DIR}/src/main/jni/src/NetJni.cpp )
 
 
-target_include_directories(neteasenet PRIVATE
-                           ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/include )
+target_include_directories(neteasenet PUBLIC
+                           ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/include 
+                           {$PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/include/third_party/boringssl/src/include)
 
 target_link_libraries( neteasenet
                        chromium_net
                        chromium_base
                        chromium_url
+                       protobuf
+                       boringssl
                        android
                        log
                        z)
