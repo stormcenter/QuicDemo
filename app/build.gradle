@@ -15,12 +15,25 @@ android {
             }
         }
     }
+
+    sourceSets {
+        main {
+            // let gradle pack the shared library into apk
+            jniLibs.srcDirs = ['src/main/jni/third_party/chromium/libs']
+            jni.srcDirs = ["src/main/jni"]
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
         }
     }
+
+
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"

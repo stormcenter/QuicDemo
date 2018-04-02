@@ -79,22 +79,6 @@ set_target_properties( chromium_net
                        PROPERTIES IMPORTED_LOCATION
                        ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libnet.cr.so )
 
-add_library( protobuf
-             SHARED
-             IMPORTED )
-
-set_target_properties( protobuf
-                       PROPERTIES IMPORTED_LOCATION
-                       ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libprotobuf_lite.cr.so )
-
-add_library( boringssl
-             SHARED
-             IMPORTED )
-
-set_target_properties( boringssl
-                       PROPERTIES IMPORTED_LOCATION
-                       ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libboringssl.cr.so )                   
-
 
 add_library( neteasenet
              SHARED
@@ -108,8 +92,6 @@ target_link_libraries( neteasenet
                        chromium_net
                        chromium_base
                        chromium_url
-                       protobuf
-                       boringssl
                        android
                        log
                        z)
