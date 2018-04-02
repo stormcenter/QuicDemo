@@ -32,72 +32,10 @@
   ((void)__android_log_print(ANDROID_LOG_WARN, TAG, __VA_ARGS__))
 
 # define NELEM(x) ((int) (sizeof(x) / sizeof((x)[0])))
-// Simply quits the current message loop when finished.  Used to make
-// URLFetcher synchronous.
-class QuitDelegate : public net::URLFetcherDelegate {
-public:
-    QuitDelegate() {}
-    ~QuitDelegate() override {}
-    // net::URLFetcherDelegate implementation.
-    void OnURLFetchComplete(const net::URLFetcher* source) override {
-        LOGE("OnURLFetchComplete");
-        base::MessageLoop::current()->QuitWhenIdleClosure();
-        int responseCode = source->GetResponseCode();
-        const net::URLRequestStatus status = source->GetStatus();
-        if (status.status() != net::URLRequestStatus::SUCCESS) {
-            LOGW("Request failed with error code: %s", net::ErrorToString(status.error()).c_str());
-            return;
-        }
-        const net::HttpResponseHeaders* const headers = source->GetResponseHeaders();
-        if (!headers) {
-            LOGW("Response does not have any headers");
-            return;
-        }
-        size_t iter = 0;
-        std::string header_name;
-        std::string date_header;
-        while (headers->EnumerateHeaderLines(&iter, &header_name, &date_header)) {
-            LOGW("Got %s header: %s\n", header_name.c_str(), date_header.c_str());
-        }
-        std::string responseStr;
-        if(!source->GetResponseAsString(&responseStr)) {
-            LOGW("Get response as string failed!");
-        }
-        LOGI("Content len = %lld, response code = %d, response = %s",
-             source->GetReceivedResponseContentLength(),
-             source->GetResponseCode(),
-             responseStr.c_str());
-    }
 
-    void OnURLFetchUploadProgress(const net::URLFetcher* source,
-                                  int64_t current,
-                                  int64_t total) override {
-        LOGE("OnURLFetchUploadProgress");
-    }
-//private:
-//    DISALLOW_COPY_AND_ASSIGN(QuitDelegate);
-};
 
-// Builds a URLRequestContext assuming there's only a single loop.
-static std::unique_ptr<net::URLRequestContext> BuildURLRequestContext(net::NetLog *net_log) {
-    net::URLRequestContextBuilder builder;
-    builder.set_net_log(net_log);
-//#if defined(OS_LINUX)
-    // On Linux, use a fixed ProxyConfigService, since the default one
-    // depends on glib.
-    //
-    // TODO(akalin): Remove this once http://crbug.com/146421 is fixed.
-    builder.set_proxy_config_service(
-            base::WrapUnique(new net::ProxyConfigServiceFixed(net::ProxyConfigWithAnnotation::CreateDirect())));
-//#endif
-    std::unique_ptr<net::URLRequestContext> context(builder.Build());
-    context->set_net_log(net_log);
-    return context;
-}
 static void nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
     const char* native_url = env->GetStringUTFChars(javaUrl, NULL);
-    LOGW("Url: %s", native_url);
-    base::AtExitManager exit_manager;
     LOGW("Url: %s", native_url);
     GURL url(native_url);
     if (!url.is_valid() || (url.scheme() != "http" && url.scheme() != "https")) {
@@ -105,22 +43,7 @@ static void nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
         return;
     }
     LOGW("Url: %s", native_url);
-    base::MessageLoopForIO main_loop;
-    QuitDelegate delegate;
-    std::unique_ptr<net::URLFetcher> fetcher =
-            net::URLFetcher::Create(url, net::URLFetcher::GET, &delegate);
-    net::NetLog *net_log = nullptr;
-    std::unique_ptr<net::URLRequestContext> url_request_context(BuildURLRequestContext(net_log));
-    fetcher->SetRequestContext(
-            // Since there's only a single thread, there's no need to worry
-            // about when the URLRequestContext gets created.
-            // The URLFetcher will take a reference on the object, and hence
-            // implicitly take ownership.
-            new net::TrivialURLRequestContextGetter(url_request_context.get(),
-                                                    main_loop.task_runner()));
-    fetcher->Start();
-    // |delegate| quits |main_loop| when the request is done.
-    // main_loop.
+
     env->ReleaseStringUTFChars(javaUrl, native_url);
 }
 int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMethod *nativeMethods, jint nMethods) {
