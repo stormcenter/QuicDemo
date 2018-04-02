@@ -101,9 +101,8 @@ add_library( neteasenet
              ${PROJECT_SOURCE_DIR}/src/main/jni/src/NetJni.cpp )
 
 
-target_include_directories(neteasenet PUBLIC
-                           ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/include 
-                           {$PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/include/third_party/boringssl/src/include)
+target_include_directories( neteasenet PUBLIC
+                           ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/include )
 
 target_link_libraries( neteasenet
                        chromium_net
@@ -112,6 +111,5 @@ target_link_libraries( neteasenet
                        protobuf
                        boringssl
                        android
-                       ndk-helper
                        log
                        z)

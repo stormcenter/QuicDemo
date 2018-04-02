@@ -31,7 +31,7 @@
 #define LOGW(...) \
   ((void)__android_log_print(ANDROID_LOG_WARN, TAG, __VA_ARGS__))
 
-
+# define NELEM(x) ((int) (sizeof(x) / sizeof((x)[0])))
 // Simply quits the current message loop when finished.  Used to make
 // URLFetcher synchronous.
 class QuitDelegate : public net::URLFetcherDelegate {
@@ -74,8 +74,8 @@ public:
                                   int64_t total) override {
         LOGE("OnURLFetchUploadProgress");
     }
-private:
-    DISALLOW_COPY_AND_ASSIGN(QuitDelegate);
+//private:
+//    DISALLOW_COPY_AND_ASSIGN(QuitDelegate);
 };
 
 // Builds a URLRequestContext assuming there's only a single loop.
@@ -94,7 +94,7 @@ static std::unique_ptr<net::URLRequestContext> BuildURLRequestContext(net::NetLo
     context->set_net_log(net_log);
     return context;
 }
-static void NetUtils_nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
+static void nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
     const char* native_url = env->GetStringUTFChars(javaUrl, NULL);
     LOGW("Url: %s", native_url);
     base::AtExitManager exit_manager;
@@ -110,12 +110,6 @@ static void NetUtils_nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
     std::unique_ptr<net::URLFetcher> fetcher =
             net::URLFetcher::Create(url, net::URLFetcher::GET, &delegate);
     net::NetLog *net_log = nullptr;
-#ifdef DEBUG_ALL
-    net_log = new net::NetLog;
-    PrintingLogObserver printing_log_observer;
-    net_log->DeprecatedAddObserver(&printing_log_observer,
-                                  net::NetLogCaptureMode::IncludeSocketBytes());
-#endif
     std::unique_ptr<net::URLRequestContext> url_request_context(BuildURLRequestContext(net_log));
     fetcher->SetRequestContext(
             // Since there's only a single thread, there's no need to worry
@@ -126,7 +120,7 @@ static void NetUtils_nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
                                                     main_loop.task_runner()));
     fetcher->Start();
     // |delegate| quits |main_loop| when the request is done.
-    main_loop.Run(true);
+    // main_loop.
     env->ReleaseStringUTFChars(javaUrl, native_url);
 }
 int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMethod *nativeMethods, jint nMethods) {
@@ -141,9 +135,9 @@ int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMe
     return JNI_TRUE;
 }
 static JNINativeMethod gNetUtilsMethods[] = {
-        NATIVE_METHOD("NetUtils", "nativeSendRequest", "(Ljava/lang/String;)V"),
+        { "nativeSendRequest", "(java/lang/String;)V", (void *) nativeSendRequest },
 };
-void register_com_netease_volleydemo_NetUtils(JNIEnv* env) {
+void register_com_example_zhangchi09_myapplication_NetUtils(JNIEnv* env) {
     jniRegisterNativeMethods(env, "com/example/zhangchi09/myapplication/NetUtils",
                              gNetUtilsMethods, NELEM(gNetUtilsMethods));
 }
@@ -154,6 +148,6 @@ jint JNI_OnLoad(JavaVM* vm, void*) {
         LOGE("JavaVM::GetEnv() failed");
         abort();
     }
-    register_com_netease_volleydemo_NetUtils(env);
+    register_com_example_zhangchi09_myapplication_NetUtils(env);
     return JNI_VERSION_1_6;
 }
