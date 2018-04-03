@@ -11,6 +11,7 @@ android {
         externalNativeBuild {
             cmake {
                 arguments "-DANDROID_STL=c++_shared"
+                arguments '-DANDROID_TOOLCHAIN=clang'
                 abiFilters 'armeabi','armeabi-v7a'
             }
         }

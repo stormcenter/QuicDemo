@@ -33,8 +33,59 @@
 
 # define NELEM(x) ((int) (sizeof(x) / sizeof((x)[0])))
 
+#define NATIVE_METHOD(className, functionName, signature) \
+    { #functionName, signature, reinterpret_cast<void*>(className ## _ ## functionName) }
 
-static void nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
+class QuitDelegate : public net::URLFetcherDelegate {
+public:
+    QuitDelegate() {}
+    ~QuitDelegate() override {}
+    // net::URLFetcherDelegate implementation.
+    void OnURLFetchComplete(const net::URLFetcher* source) override {
+        LOGE("OnURLFetchComplete");
+        base::MessageLoop::current()->QuitWhenIdleClosure();
+        int responseCode = source->GetResponseCode();
+        const net::URLRequestStatus status = source->GetStatus();
+        if (status.status() != net::URLRequestStatus::SUCCESS) {
+            LOGW("Request failed with error code: %s", net::ErrorToString(status.error()).c_str());
+            return;
+        }
+        const net::HttpResponseHeaders* const headers = source->GetResponseHeaders();
+        if (!headers) {
+            LOGW("Response does not have any headers");
+            return;
+        }
+        size_t iter = 0;
+        std::string header_name;
+        std::string date_header;
+        while (headers->EnumerateHeaderLines(&iter, &header_name, &date_header)) {
+            LOGW("Got %s header: %s\n", header_name.c_str(), date_header.c_str());
+        }
+        std::string responseStr;
+        if(!source->GetResponseAsString(&responseStr)) {
+            LOGW("Get response as string failed!");
+        }
+        LOGI("Content len = %lld, response code = %d, response = %s",
+             source->GetReceivedResponseContentLength(),
+             source->GetResponseCode(),
+             responseStr.c_str());
+    }
+    void OnURLFetchDownloadProgress(const net::URLFetcher* source,
+                                    int64_t current,
+                                    int64_t total,
+                                    int64_t current_network_bytes) override {
+        LOGE("OnURLFetchDownloadProgress");
+    }
+    void OnURLFetchUploadProgress(const net::URLFetcher* source,
+                                  int64_t current,
+                                  int64_t total) override {
+        LOGE("OnURLFetchUploadProgress");
+    }
+private:
+    DISALLOW_COPY_AND_ASSIGN(QuitDelegate);
+};
+
+static void NetUtils_nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
     const char* native_url = env->GetStringUTFChars(javaUrl, NULL);
     LOGW("Url: %s", native_url);
     GURL url(native_url);
@@ -42,7 +93,15 @@ static void nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
         LOGW("Not valid url: %s", native_url);
         return;
     }
-    LOGW("Url: %s", native_url);
+    base::MessageLoopForIO main_loop;
+
+    QuitDelegate delegate;
+    std::unique_ptr<net::URLFetcher> fetcher =
+            net::URLFetcher::Create(url, net::URLFetcher::GET, &delegate);
+
+    std::unique_ptr<net::URLRequestContext> url_request_context;
+
+    fetcher.get();
 
     env->ReleaseStringUTFChars(javaUrl, native_url);
 }
@@ -57,8 +116,9 @@ int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMe
     }
     return JNI_TRUE;
 }
+
 static JNINativeMethod gNetUtilsMethods[] = {
-        { "nativeSendRequest", "(java/lang/String;)V", (void *) nativeSendRequest },
+        NATIVE_METHOD(NetUtils, nativeSendRequest, "(Ljava/lang/String;)V"),
 };
 void register_com_example_zhangchi09_myapplication_NetUtils(JNIEnv* env) {
     jniRegisterNativeMethods(env, "com/example/zhangchi09/myapplication/NetUtils",

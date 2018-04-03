@@ -16,7 +16,7 @@ cmake_minimum_required(VERSION 3.4.1)
 # you want to add. CMake verifies that the library exists before
 # completing its build.
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -fno-rtti")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBORINGSSL_SHARED_LIBRARY")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGOOGLE_PROTOBUF_NO_RTTI")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER")
@@ -83,7 +83,6 @@ set_target_properties( chromium_net
 add_library( neteasenet
              SHARED
              ${PROJECT_SOURCE_DIR}/src/main/jni/src/NetJni.cpp )
-
 
 target_include_directories( neteasenet PUBLIC
                            ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/include )
