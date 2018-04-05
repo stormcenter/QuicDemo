@@ -10,7 +10,7 @@
 #include "net/quic/core/crypto/quic_encrypter.h"
 #include "net/quic/core/crypto/quic_tls_adapter.h"
 #include "net/quic/platform/api/quic_export.h"
-#include "third_party/boringssl/src/include/openssl/base.h"
+#include <openssl/base.h>
 
 namespace net {
 

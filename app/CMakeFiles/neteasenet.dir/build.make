@@ -81,20 +81,593 @@ CMakeFiles/neteasenet.dir/src/main/jni/src/NetJni.cpp.o.provides: CMakeFiles/net
 CMakeFiles/neteasenet.dir/src/main/jni/src/NetJni.cpp.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/NetJni.cpp.o
 
 
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o: src/main/jni/src/tools/quic/chlo_extractor.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/chlo_extractor.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/chlo_extractor.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/chlo_extractor.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o: src/main/jni/src/tools/quic/quic_client_base.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_client_base.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_client_base.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_client_base.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o: src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o: src/main/jni/src/tools/quic/quic_dispatcher.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_dispatcher.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_dispatcher.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_dispatcher.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o: src/main/jni/src/tools/quic/quic_http_response_cache.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_http_response_cache.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_http_response_cache.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_http_response_cache.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o: src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o: src/main/jni/src/tools/quic/quic_simple_client.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_client.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_client.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_client.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o: src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o: src/main/jni/src/tools/quic/quic_simple_dispatcher.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o: src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o: src/main/jni/src/tools/quic/quic_simple_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o: src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o: src/main/jni/src/tools/quic/quic_simple_server_session.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_session.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_session.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_session.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o: src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o: src/main/jni/src/tools/quic/quic_simple_server_stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_stream.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_stream.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_simple_server_stream.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o: src/main/jni/src/tools/quic/quic_spdy_client_base.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_client_base.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_client_base.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_client_base.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o: src/main/jni/src/tools/quic/quic_spdy_client_session.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_client_session.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_client_session.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_client_session.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o: src/main/jni/src/tools/quic/quic_spdy_client_stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o: src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o: src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o: src/main/jni/src/tools/quic/stateless_rejector.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/stateless_rejector.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/stateless_rejector.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/stateless_rejector.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o
+
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o: CMakeFiles/neteasenet.dir/flags.make
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o: src/main/jni/src/tools/quic/synchronous_host_resolver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o -c /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/synchronous_host_resolver.cc
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/synchronous_host_resolver.cc > CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.i
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangchi09/AndroidStudioProjects/MyApplication/app/src/main/jni/src/tools/quic/synchronous_host_resolver.cc -o CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.s
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o.requires:
+
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o.requires
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o.provides: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o.requires
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o.provides.build
+.PHONY : CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o.provides
+
+CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o.provides.build: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o
+
+
 # Object files for target neteasenet
 neteasenet_OBJECTS = \
-"CMakeFiles/neteasenet.dir/src/main/jni/src/NetJni.cpp.o"
+"CMakeFiles/neteasenet.dir/src/main/jni/src/NetJni.cpp.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o" \
+"CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o"
 
 # External object files for target neteasenet
 neteasenet_EXTERNAL_OBJECTS =
 
 libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/NetJni.cpp.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o
+libneteasenet.so: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o
 libneteasenet.so: CMakeFiles/neteasenet.dir/build.make
 libneteasenet.so: src/main/jni/third_party/chromium/libs/libnet.cr.so
 libneteasenet.so: src/main/jni/third_party/chromium/libs/libbase.cr.so
 libneteasenet.so: src/main/jni/third_party/chromium/libs/liburl.cr.so
+libneteasenet.so: src/main/jni/third_party/chromium/libs/libboringssl.cr.so
 libneteasenet.so: CMakeFiles/neteasenet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libneteasenet.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhangchi09/AndroidStudioProjects/MyApplication/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX shared library libneteasenet.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neteasenet.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -103,6 +676,28 @@ CMakeFiles/neteasenet.dir/build: libneteasenet.so
 .PHONY : CMakeFiles/neteasenet.dir/build
 
 CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/NetJni.cpp.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o.requires
+CMakeFiles/neteasenet.dir/requires: CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o.requires
 
 .PHONY : CMakeFiles/neteasenet.dir/requires
 

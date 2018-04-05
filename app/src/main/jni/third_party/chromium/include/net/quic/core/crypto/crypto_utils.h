@@ -19,7 +19,7 @@
 #include "net/quic/platform/api/quic_export.h"
 #include "net/quic/platform/api/quic_string.h"
 #include "net/quic/platform/api/quic_string_piece.h"
-#include "third_party/boringssl/src/include/openssl/evp.h"
+#include <openssl/evp.h>
 
 namespace net {
 

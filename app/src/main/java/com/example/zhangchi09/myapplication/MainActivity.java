@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.testButton) {
-            NetUtils.sendRequest("https://www.baidu.com/");
+            NetUtils.quicclient("10.101.41.110", 8300, "https://blog.it-cloud.cn:8300/demo/tiles");
         }
     }
 

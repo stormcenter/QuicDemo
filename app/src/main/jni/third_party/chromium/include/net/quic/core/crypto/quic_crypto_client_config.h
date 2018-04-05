@@ -18,7 +18,7 @@
 #include "net/quic/platform/api/quic_reference_counted.h"
 #include "net/quic/platform/api/quic_string.h"
 #include "net/quic/platform/api/quic_string_piece.h"
-#include "third_party/boringssl/src/include/openssl/base.h"
+#include <openssl/base.h>
 
 namespace net {
 

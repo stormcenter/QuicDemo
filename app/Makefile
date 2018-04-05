@@ -150,6 +150,600 @@ src/main/jni/src/NetJni.cpp.s:
 	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/NetJni.cpp.s
 .PHONY : src/main/jni/src/NetJni.cpp.s
 
+src/main/jni/src/tools/quic/chlo_extractor.o: src/main/jni/src/tools/quic/chlo_extractor.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/chlo_extractor.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/chlo_extractor.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.o
+.PHONY : src/main/jni/src/tools/quic/chlo_extractor.cc.o
+
+src/main/jni/src/tools/quic/chlo_extractor.i: src/main/jni/src/tools/quic/chlo_extractor.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/chlo_extractor.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/chlo_extractor.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.i
+.PHONY : src/main/jni/src/tools/quic/chlo_extractor.cc.i
+
+src/main/jni/src/tools/quic/chlo_extractor.s: src/main/jni/src/tools/quic/chlo_extractor.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/chlo_extractor.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/chlo_extractor.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/chlo_extractor.cc.s
+.PHONY : src/main/jni/src/tools/quic/chlo_extractor.cc.s
+
+src/main/jni/src/tools/quic/quic_client_base.o: src/main/jni/src/tools/quic/quic_client_base.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_client_base.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_client_base.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_client_base.cc.o
+
+src/main/jni/src/tools/quic/quic_client_base.i: src/main/jni/src/tools/quic/quic_client_base.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_client_base.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_client_base.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_client_base.cc.i
+
+src/main/jni/src/tools/quic/quic_client_base.s: src/main/jni/src/tools/quic/quic_client_base.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_client_base.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_client_base.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_base.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_client_base.cc.s
+
+src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.o: src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.o
+
+src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.i: src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.i
+
+src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.s: src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc.s
+
+src/main/jni/src/tools/quic/quic_dispatcher.o: src/main/jni/src/tools/quic/quic_dispatcher.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_dispatcher.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_dispatcher.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_dispatcher.cc.o
+
+src/main/jni/src/tools/quic/quic_dispatcher.i: src/main/jni/src/tools/quic/quic_dispatcher.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_dispatcher.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_dispatcher.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_dispatcher.cc.i
+
+src/main/jni/src/tools/quic/quic_dispatcher.s: src/main/jni/src/tools/quic/quic_dispatcher.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_dispatcher.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_dispatcher.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_dispatcher.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_dispatcher.cc.s
+
+src/main/jni/src/tools/quic/quic_http_response_cache.o: src/main/jni/src/tools/quic/quic_http_response_cache.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_http_response_cache.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_http_response_cache.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_http_response_cache.cc.o
+
+src/main/jni/src/tools/quic/quic_http_response_cache.i: src/main/jni/src/tools/quic/quic_http_response_cache.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_http_response_cache.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_http_response_cache.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_http_response_cache.cc.i
+
+src/main/jni/src/tools/quic/quic_http_response_cache.s: src/main/jni/src/tools/quic/quic_http_response_cache.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_http_response_cache.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_http_response_cache.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_http_response_cache.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_http_response_cache.cc.s
+
+src/main/jni/src/tools/quic/quic_per_connection_packet_writer.o: src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_per_connection_packet_writer.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.o
+
+src/main/jni/src/tools/quic/quic_per_connection_packet_writer.i: src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_per_connection_packet_writer.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.i
+
+src/main/jni/src/tools/quic/quic_per_connection_packet_writer.s: src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_per_connection_packet_writer.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc.s
+
+src/main/jni/src/tools/quic/quic_simple_client.o: src/main/jni/src/tools/quic/quic_simple_client.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_client.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_simple_client.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_simple_client.cc.o
+
+src/main/jni/src/tools/quic/quic_simple_client.i: src/main/jni/src/tools/quic/quic_simple_client.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_client.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_simple_client.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_simple_client.cc.i
+
+src/main/jni/src/tools/quic/quic_simple_client.s: src/main/jni/src/tools/quic/quic_simple_client.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_client.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_simple_client.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_client.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_simple_client.cc.s
+
+src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.o: src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.o
+
+src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.i: src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.i
+
+src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.s: src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc.s
+
+src/main/jni/src/tools/quic/quic_simple_dispatcher.o: src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_dispatcher.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.o
+
+src/main/jni/src/tools/quic/quic_simple_dispatcher.i: src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_dispatcher.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.i
+
+src/main/jni/src/tools/quic/quic_simple_dispatcher.s: src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_dispatcher.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_simple_dispatcher.cc.s
+
+src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.o: src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.o
+
+src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.i: src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.i
+
+src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.s: src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc.s
+
+src/main/jni/src/tools/quic/quic_simple_server.o: src/main/jni/src/tools/quic/quic_simple_server.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_simple_server.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server.cc.o
+
+src/main/jni/src/tools/quic/quic_simple_server.i: src/main/jni/src/tools/quic/quic_simple_server.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_simple_server.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server.cc.i
+
+src/main/jni/src/tools/quic/quic_simple_server.s: src/main/jni/src/tools/quic/quic_simple_server.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_simple_server.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server.cc.s
+
+src/main/jni/src/tools/quic/quic_simple_server_packet_writer.o: src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_packet_writer.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.o
+
+src/main/jni/src/tools/quic/quic_simple_server_packet_writer.i: src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_packet_writer.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.i
+
+src/main/jni/src/tools/quic/quic_simple_server_packet_writer.s: src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_packet_writer.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc.s
+
+src/main/jni/src/tools/quic/quic_simple_server_session.o: src/main/jni/src/tools/quic/quic_simple_server_session.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_simple_server_session.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session.cc.o
+
+src/main/jni/src/tools/quic/quic_simple_server_session.i: src/main/jni/src/tools/quic/quic_simple_server_session.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_simple_server_session.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session.cc.i
+
+src/main/jni/src/tools/quic/quic_simple_server_session.s: src/main/jni/src/tools/quic/quic_simple_server_session.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_simple_server_session.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session.cc.s
+
+src/main/jni/src/tools/quic/quic_simple_server_session_helper.o: src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session_helper.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.o
+
+src/main/jni/src/tools/quic/quic_simple_server_session_helper.i: src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session_helper.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.i
+
+src/main/jni/src/tools/quic/quic_simple_server_session_helper.s: src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session_helper.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc.s
+
+src/main/jni/src/tools/quic/quic_simple_server_stream.o: src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_stream.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_stream.cc.o
+
+src/main/jni/src/tools/quic/quic_simple_server_stream.i: src/main/jni/src/tools/quic/quic_simple_server_stream.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_stream.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_simple_server_stream.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_stream.cc.i
+
+src/main/jni/src/tools/quic/quic_simple_server_stream.s: src/main/jni/src/tools/quic/quic_simple_server_stream.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_stream.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_simple_server_stream.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_simple_server_stream.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_simple_server_stream.cc.s
+
+src/main/jni/src/tools/quic/quic_spdy_client_base.o: src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_base.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_base.cc.o
+
+src/main/jni/src/tools/quic/quic_spdy_client_base.i: src/main/jni/src/tools/quic/quic_spdy_client_base.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_base.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_spdy_client_base.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_base.cc.i
+
+src/main/jni/src/tools/quic/quic_spdy_client_base.s: src/main/jni/src/tools/quic/quic_spdy_client_base.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_base.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_spdy_client_base.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_base.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_base.cc.s
+
+src/main/jni/src/tools/quic/quic_spdy_client_session.o: src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_session.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_session.cc.o
+
+src/main/jni/src/tools/quic/quic_spdy_client_session.i: src/main/jni/src/tools/quic/quic_spdy_client_session.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_session.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_spdy_client_session.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_session.cc.i
+
+src/main/jni/src/tools/quic/quic_spdy_client_session.s: src/main/jni/src/tools/quic/quic_spdy_client_session.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_session.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_spdy_client_session.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_session.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_session.cc.s
+
+src/main/jni/src/tools/quic/quic_spdy_client_stream.o: src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_stream.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.o
+
+src/main/jni/src/tools/quic/quic_spdy_client_stream.i: src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_stream.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.i
+
+src/main/jni/src/tools/quic/quic_spdy_client_stream.s: src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_stream.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_client_stream.cc.s
+
+src/main/jni/src/tools/quic/quic_spdy_server_stream_base.o: src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_server_stream_base.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.o
+
+src/main/jni/src/tools/quic/quic_spdy_server_stream_base.i: src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_server_stream_base.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.i
+
+src/main/jni/src/tools/quic/quic_spdy_server_stream_base.s: src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_server_stream_base.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc.s
+
+src/main/jni/src/tools/quic/quic_time_wait_list_manager.o: src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/quic_time_wait_list_manager.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o
+.PHONY : src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.o
+
+src/main/jni/src/tools/quic/quic_time_wait_list_manager.i: src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/quic_time_wait_list_manager.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.i
+.PHONY : src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.i
+
+src/main/jni/src/tools/quic/quic_time_wait_list_manager.s: src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/quic_time_wait_list_manager.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.s
+.PHONY : src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc.s
+
+src/main/jni/src/tools/quic/stateless_rejector.o: src/main/jni/src/tools/quic/stateless_rejector.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/stateless_rejector.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/stateless_rejector.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.o
+.PHONY : src/main/jni/src/tools/quic/stateless_rejector.cc.o
+
+src/main/jni/src/tools/quic/stateless_rejector.i: src/main/jni/src/tools/quic/stateless_rejector.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/stateless_rejector.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/stateless_rejector.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.i
+.PHONY : src/main/jni/src/tools/quic/stateless_rejector.cc.i
+
+src/main/jni/src/tools/quic/stateless_rejector.s: src/main/jni/src/tools/quic/stateless_rejector.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/stateless_rejector.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/stateless_rejector.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/stateless_rejector.cc.s
+.PHONY : src/main/jni/src/tools/quic/stateless_rejector.cc.s
+
+src/main/jni/src/tools/quic/synchronous_host_resolver.o: src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o
+
+.PHONY : src/main/jni/src/tools/quic/synchronous_host_resolver.o
+
+# target to build an object file
+src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o
+.PHONY : src/main/jni/src/tools/quic/synchronous_host_resolver.cc.o
+
+src/main/jni/src/tools/quic/synchronous_host_resolver.i: src/main/jni/src/tools/quic/synchronous_host_resolver.cc.i
+
+.PHONY : src/main/jni/src/tools/quic/synchronous_host_resolver.i
+
+# target to preprocess a source file
+src/main/jni/src/tools/quic/synchronous_host_resolver.cc.i:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.i
+.PHONY : src/main/jni/src/tools/quic/synchronous_host_resolver.cc.i
+
+src/main/jni/src/tools/quic/synchronous_host_resolver.s: src/main/jni/src/tools/quic/synchronous_host_resolver.cc.s
+
+.PHONY : src/main/jni/src/tools/quic/synchronous_host_resolver.s
+
+# target to generate assembly for a file
+src/main/jni/src/tools/quic/synchronous_host_resolver.cc.s:
+	$(MAKE) -f CMakeFiles/neteasenet.dir/build.make CMakeFiles/neteasenet.dir/src/main/jni/src/tools/quic/synchronous_host_resolver.cc.s
+.PHONY : src/main/jni/src/tools/quic/synchronous_host_resolver.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +756,72 @@ help:
 	@echo "... src/main/jni/src/NetJni.o"
 	@echo "... src/main/jni/src/NetJni.i"
 	@echo "... src/main/jni/src/NetJni.s"
+	@echo "... src/main/jni/src/tools/quic/chlo_extractor.o"
+	@echo "... src/main/jni/src/tools/quic/chlo_extractor.i"
+	@echo "... src/main/jni/src/tools/quic/chlo_extractor.s"
+	@echo "... src/main/jni/src/tools/quic/quic_client_base.o"
+	@echo "... src/main/jni/src/tools/quic/quic_client_base.i"
+	@echo "... src/main/jni/src/tools/quic/quic_client_base.s"
+	@echo "... src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.o"
+	@echo "... src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.i"
+	@echo "... src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.s"
+	@echo "... src/main/jni/src/tools/quic/quic_dispatcher.o"
+	@echo "... src/main/jni/src/tools/quic/quic_dispatcher.i"
+	@echo "... src/main/jni/src/tools/quic/quic_dispatcher.s"
+	@echo "... src/main/jni/src/tools/quic/quic_http_response_cache.o"
+	@echo "... src/main/jni/src/tools/quic/quic_http_response_cache.i"
+	@echo "... src/main/jni/src/tools/quic/quic_http_response_cache.s"
+	@echo "... src/main/jni/src/tools/quic/quic_per_connection_packet_writer.o"
+	@echo "... src/main/jni/src/tools/quic/quic_per_connection_packet_writer.i"
+	@echo "... src/main/jni/src/tools/quic/quic_per_connection_packet_writer.s"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_client.o"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_client.i"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_client.s"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.o"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.i"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.s"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_dispatcher.o"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_dispatcher.i"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_dispatcher.s"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.o"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.i"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.s"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server.o"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server.i"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server.s"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_packet_writer.o"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_packet_writer.i"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_packet_writer.s"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_session.o"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_session.i"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_session.s"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_session_helper.o"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_session_helper.i"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_session_helper.s"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_stream.o"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_stream.i"
+	@echo "... src/main/jni/src/tools/quic/quic_simple_server_stream.s"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_client_base.o"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_client_base.i"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_client_base.s"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_client_session.o"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_client_session.i"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_client_session.s"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_client_stream.o"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_client_stream.i"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_client_stream.s"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_server_stream_base.o"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_server_stream_base.i"
+	@echo "... src/main/jni/src/tools/quic/quic_spdy_server_stream_base.s"
+	@echo "... src/main/jni/src/tools/quic/quic_time_wait_list_manager.o"
+	@echo "... src/main/jni/src/tools/quic/quic_time_wait_list_manager.i"
+	@echo "... src/main/jni/src/tools/quic/quic_time_wait_list_manager.s"
+	@echo "... src/main/jni/src/tools/quic/stateless_rejector.o"
+	@echo "... src/main/jni/src/tools/quic/stateless_rejector.i"
+	@echo "... src/main/jni/src/tools/quic/stateless_rejector.s"
+	@echo "... src/main/jni/src/tools/quic/synchronous_host_resolver.o"
+	@echo "... src/main/jni/src/tools/quic/synchronous_host_resolver.i"
+	@echo "... src/main/jni/src/tools/quic/synchronous_host_resolver.s"
 .PHONY : help
 
 

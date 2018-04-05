@@ -2,24 +2,50 @@
 // Created by zhangchi09 on 18-3-30.
 //
 #include <stdio.h>
-#include "net/base/network_delegate_impl.h"
 #include <jni.h>
 #include <android/log.h>
+
+#include <iostream>
+
 #include "base/at_exit.h"
-#include "base/json/json_writer.h"
+#include "base/command_line.h"
+#include "base/logging.h"
 #include "base/message_loop/message_loop.h"
-#include "base/memory/ptr_util.h"
-#include "base/run_loop.h"
-#include "base/values.h"
-#include "net/http/http_response_headers.h"
-#include "net/proxy_resolution/proxy_config_service_fixed.h"
-#include "net/proxy_resolution/proxy_config.h"
-#include "net/url_request/url_fetcher.h"
-#include "net/url_request/url_fetcher_delegate.h"
-#include "net/url_request/url_request_context.h"
-#include "net/url_request/url_request_context_builder.h"
-#include "net/url_request/url_request_context_getter.h"
-#include "net/url_request/url_request.h"
+#include "base/task_scheduler/task_scheduler.h"
+#include "net/base/net_errors.h"
+#include "net/base/privacy_mode.h"
+#include "net/cert/cert_verifier.h"
+#include "net/cert/ct_known_logs.h"
+#include "net/cert/ct_log_verifier.h"
+#include "net/cert/multi_log_ct_verifier.h"
+#include "net/http/transport_security_state.h"
+#include "net/quic/chromium/crypto/proof_verifier_chromium.h"
+#include "net/quic/core/quic_error_codes.h"
+#include "net/quic/core/quic_packets.h"
+#include "net/quic/core/quic_server_id.h"
+#include "net/quic/platform/api/quic_socket_address.h"
+#include "net/quic/platform/api/quic_str_cat.h"
+#include "net/quic/platform/api/quic_string_piece.h"
+#include "net/quic/platform/api/quic_text_utils.h"
+#include "net/spdy/chromium/spdy_http_utils.h"
+#include "net/spdy/core/spdy_header_block.h"
+#include "url/gurl.h"
+
+using net::CertVerifier;
+using net::CTPolicyEnforcer;
+using net::CTVerifier;
+using net::MultiLogCTVerifier;
+using net::ProofVerifier;
+using net::ProofVerifierChromium;
+using net::QuicStringPiece;
+using net::QuicTextUtils;
+using net::SpdyHeaderBlock;
+using net::TransportSecurityState;
+using std::cout;
+using std::cerr;
+using std::endl;
+using std::string;
+
 #define TAG "NetUtils"
 
 #define LOGI(...) \
@@ -36,75 +62,58 @@
 #define NATIVE_METHOD(className, functionName, signature) \
     { #functionName, signature, reinterpret_cast<void*>(className ## _ ## functionName) }
 
-class QuitDelegate : public net::URLFetcherDelegate {
-public:
-    QuitDelegate() {}
-    ~QuitDelegate() override {}
-    // net::URLFetcherDelegate implementation.
-    void OnURLFetchComplete(const net::URLFetcher* source) override {
-        LOGE("OnURLFetchComplete");
-        base::MessageLoop::current()->QuitWhenIdleClosure();
-        int responseCode = source->GetResponseCode();
-        const net::URLRequestStatus status = source->GetStatus();
-        if (status.status() != net::URLRequestStatus::SUCCESS) {
-            LOGW("Request failed with error code: %s", net::ErrorToString(status.error()).c_str());
-            return;
-        }
-        const net::HttpResponseHeaders* const headers = source->GetResponseHeaders();
-        if (!headers) {
-            LOGW("Response does not have any headers");
-            return;
-        }
-        size_t iter = 0;
-        std::string header_name;
-        std::string date_header;
-        while (headers->EnumerateHeaderLines(&iter, &header_name, &date_header)) {
-            LOGW("Got %s header: %s\n", header_name.c_str(), date_header.c_str());
-        }
-        std::string responseStr;
-        if(!source->GetResponseAsString(&responseStr)) {
-            LOGW("Get response as string failed!");
-        }
-        LOGI("Content len = %lld, response code = %d, response = %s",
-             source->GetReceivedResponseContentLength(),
-             source->GetResponseCode(),
-             responseStr.c_str());
-    }
-    void OnURLFetchDownloadProgress(const net::URLFetcher* source,
-                                    int64_t current,
-                                    int64_t total,
-                                    int64_t current_network_bytes) override {
-        LOGE("OnURLFetchDownloadProgress");
-    }
-    void OnURLFetchUploadProgress(const net::URLFetcher* source,
-                                  int64_t current,
-                                  int64_t total) override {
-        LOGE("OnURLFetchUploadProgress");
-    }
-private:
-    DISALLOW_COPY_AND_ASSIGN(QuitDelegate);
-};
 
-static void NetUtils_nativeSendRequest(JNIEnv* env, jclass, jstring javaUrl) {
-    const char* native_url = env->GetStringUTFChars(javaUrl, NULL);
-    LOGW("Url: %s", native_url);
-    GURL url(native_url);
-    if (!url.is_valid() || (url.scheme() != "http" && url.scheme() != "https")) {
-        LOGW("Not valid url: %s", native_url);
-        return;
-    }
-    base::MessageLoopForIO main_loop;
+static void NetUtils_nativeQuicClient(JNIEnv* env, jclass, jstring host, jint port, jstring path) {
+    const char* param_host = env->GetStringUTFChars(host, NULL);
+    int param_port = port;
+    const char* param_path = env->GetStringUTFChars(path, NULL);
 
-    QuitDelegate delegate;
-    std::unique_ptr<net::URLFetcher> fetcher =
-            net::URLFetcher::Create(url, net::URLFetcher::GET, &delegate);
+    LOGW("Host: %s\n", param_host);
+    LOGW("Port: %d\n", param_port);
+    LOGW("Path: %s\n", param_path);
 
-    std::unique_ptr<net::URLRequestContext> url_request_context;
+    base::AtExitManager exit_manager;
+    base::MessageLoopForIO message_loop;
+    net::QuicIpAddress ip_addr;
 
-    fetcher.get();
-
-    env->ReleaseStringUTFChars(javaUrl, native_url);
+    GURL url(param_path);
+    string s_host = string(param_host);
+//    net::AddressList addresses;
+//    LOGE("ok1 %s",s_host.c_str());
+//    int rv = net::SynchronousHostResolver::Resolve(s_host, &addresses);
+//    if (rv != net::OK) {
+//        LOGE("Unable to resolve %s",param_host);
+//        return;
+//    }
+//    LOGE("ok2");
+//    ip_addr =
+//            net::QuicIpAddress(net::QuicIpAddressImpl(addresses[0].address()));
+//    LOGE("ok3");
+//    string host_port = net::QuicStrCat(ip_addr.ToString(), ":", port);
+//
+//    LOGE("host_port %s",host_port.c_str());
+//
+//    net::QuicServerId server_id(url.host(), url.EffectiveIntPort(),
+//                                net::PRIVACY_MODE_DISABLED);
+//
+//    std::unique_ptr<CertVerifier> cert_verifier(CertVerifier::CreateDefault());
+//    std::unique_ptr<TransportSecurityState> transport_security_state(
+//            new TransportSecurityState);
+//    std::unique_ptr<MultiLogCTVerifier> ct_verifier(new MultiLogCTVerifier());
+////    ct_verifier->AddLogs(net::ct::CreateLogVerifiersForKnownLogs());
+//    std::unique_ptr<CTPolicyEnforcer> ct_policy_enforcer(new CTPolicyEnforcer());
+//
+//
+//    std::unique_ptr<ProofVerifier> proof_verifier;
+//    proof_verifier.reset(new ProofVerifierChromium(
+//            cert_verifier.get(), ct_policy_enforcer.get(),
+//            transport_security_state.get(), ct_verifier.get()));
+//
+//    net::ParsedQuicVersionVector versions = net::AllSupportedVersions();
+//    net::QuicSimpleClient client(net::QuicSocketAddress(ip_addr, port), server_id,
+//                                 versions, std::move(proof_verifier));
 }
+
 int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMethod *nativeMethods, jint nMethods) {
     jclass clazz;
     clazz = env->FindClass(classPathName);
@@ -118,7 +127,7 @@ int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMe
 }
 
 static JNINativeMethod gNetUtilsMethods[] = {
-        NATIVE_METHOD(NetUtils, nativeSendRequest, "(Ljava/lang/String;)V"),
+        NATIVE_METHOD(NetUtils, nativeQuicClient, "(Ljava/lang/String;ILjava/lang/String;)V"),
 };
 void register_com_example_zhangchi09_myapplication_NetUtils(JNIEnv* env) {
     jniRegisterNativeMethods(env, "com/example/zhangchi09/myapplication/NetUtils",

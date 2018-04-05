@@ -16,7 +16,8 @@ cmake_minimum_required(VERSION 3.4.1)
 # you want to add. CMake verifies that the library exists before
 # completing its build.
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -fno-rtti")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -fno-rtti -fno-threadsafe-statics -Wno-narrowing -Wno-char-subscripts")
+set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -latomic")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBORINGSSL_SHARED_LIBRARY")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGOOGLE_PROTOBUF_NO_RTTI")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER")
@@ -80,9 +81,45 @@ set_target_properties( chromium_net
                        ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libnet.cr.so )
 
 
+add_library( boring_ssl
+             SHARED
+             IMPORTED )
+
+set_target_properties( boring_ssl
+                       PROPERTIES IMPORTED_LOCATION
+                       ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/libs/${ANDROID_ABI}/libboringssl.cr.so )
+
+
 add_library( neteasenet
              SHARED
-             ${PROJECT_SOURCE_DIR}/src/main/jni/src/NetJni.cpp )
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/NetJni.cpp
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/chlo_extractor.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_client_base.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_client_message_loop_network_helper.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_dispatcher.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_http_response_cache.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_per_connection_packet_writer.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_simple_client.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_simple_crypto_server_stream_helper.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_simple_dispatcher.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_simple_per_connection_packet_writer.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_simple_server.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_simple_server_packet_writer.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_simple_server_session.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_simple_server_session_helper.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_simple_server_stream.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_spdy_client_base.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_spdy_client_session.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_spdy_client_stream.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/stateless_rejector.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/synchronous_host_resolver.cc)
+
+include_directories(${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/boringssl/src/include)
+
+include_directories(${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/protobuf/)
+
 
 target_include_directories( neteasenet PUBLIC
                            ${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/include )
@@ -91,6 +128,7 @@ target_link_libraries( neteasenet
                        chromium_net
                        chromium_base
                        chromium_url
+                       boring_ssl
                        android
                        log
                        z)

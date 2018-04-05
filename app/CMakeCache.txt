@@ -172,7 +172,7 @@ Project_BINARY_DIR:STATIC=/home/zhangchi09/AndroidStudioProjects/MyApplication/a
 Project_SOURCE_DIR:STATIC=/home/zhangchi09/AndroidStudioProjects/MyApplication/app
 
 //Dependencies for the target
-neteasenet_LIB_DEPENDS:STATIC=general;chromium_net;general;chromium_base;general;chromium_url;general;android;general;log;general;z;
+neteasenet_LIB_DEPENDS:STATIC=general;chromium_net;general;chromium_base;general;chromium_url;general;boring_ssl;general;android;general;log;general;z;
 
 
 ########################

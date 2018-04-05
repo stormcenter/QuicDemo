@@ -12,7 +12,7 @@
 #include "net/quic/core/tls_handshaker.h"
 #include "net/quic/platform/api/quic_export.h"
 #include "net/quic/platform/api/quic_string.h"
-#include "third_party/boringssl/src/include/openssl/ssl.h"
+#include <openssl/ssl.h>
 
 namespace net {
 
