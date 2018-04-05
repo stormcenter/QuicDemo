@@ -15,7 +15,7 @@
 #include "base/macros.h"
 #include "build/build_config.h"
 #include "crypto/crypto_export.h"
-#include "third_party/boringssl/src/include/openssl/base.h"
+#include <openssl/base.h>
 
 namespace crypto {
 

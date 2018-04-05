@@ -33,8 +33,8 @@
 #include "net/ssl/ssl_client_cert_type.h"
 #include "net/ssl/ssl_config_service.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
-#include "third_party/boringssl/src/include/openssl/base.h"
-#include "third_party/boringssl/src/include/openssl/ssl.h"
+#include <openssl/base.h>
+#include <openssl/ssl.h>
 
 namespace base {
 class FilePath;

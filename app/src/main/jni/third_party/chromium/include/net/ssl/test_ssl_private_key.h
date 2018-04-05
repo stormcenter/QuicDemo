@@ -7,7 +7,7 @@
 
 #include "base/memory/ref_counted.h"
 #include "net/base/net_export.h"
-#include "third_party/boringssl/src/include/openssl/base.h"
+#include <openssl/base.h>
 
 namespace crypto {
 class RSAPrivateKey;

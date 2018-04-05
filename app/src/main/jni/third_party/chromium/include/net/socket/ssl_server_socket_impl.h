@@ -14,7 +14,7 @@
 #include "net/base/io_buffer.h"
 #include "net/socket/ssl_server_socket.h"
 #include "net/ssl/ssl_server_config.h"
-#include "third_party/boringssl/src/include/openssl/base.h"
+#include <openssl/base.h>
 
 namespace net {
 

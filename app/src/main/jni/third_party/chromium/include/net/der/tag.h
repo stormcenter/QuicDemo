@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 #include "net/base/net_export.h"
-#include "third_party/boringssl/src/include/openssl/bytestring.h"
+#include <openssl/bytestring.h>
 
 namespace net {
 

@@ -9,7 +9,7 @@
 #include "base/memory/weak_ptr.h"
 #include "net/base/completion_callback.h"
 #include "net/base/net_export.h"
-#include "third_party/boringssl/src/include/openssl/base.h"
+#include <openssl/base.h>
 
 namespace net {
 

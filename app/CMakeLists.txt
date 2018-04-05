@@ -16,7 +16,7 @@ cmake_minimum_required(VERSION 3.4.1)
 # you want to add. CMake verifies that the library exists before
 # completing its build.
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -fno-rtti -fno-threadsafe-statics -Wno-narrowing -Wno-char-subscripts")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -fno-rtti -pthread")
 set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -latomic")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBORINGSSL_SHARED_LIBRARY")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGOOGLE_PROTOBUF_NO_RTTI")
@@ -130,5 +130,6 @@ target_link_libraries( neteasenet
                        chromium_url
                        boring_ssl
                        android
+                       atomic
                        log
                        z)

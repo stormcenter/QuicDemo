@@ -13,7 +13,7 @@
 #include "net/cert/internal/cert_errors.h"
 #include "net/cert/internal/parsed_certificate.h"
 #include "net/der/input.h"
-#include "third_party/boringssl/src/include/openssl/evp.h"
+#include <openssl/evp.h>
 
 namespace net {
 

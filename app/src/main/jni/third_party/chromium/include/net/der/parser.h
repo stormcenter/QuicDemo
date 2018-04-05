@@ -12,7 +12,7 @@
 #include "net/base/net_export.h"
 #include "net/der/input.h"
 #include "net/der/tag.h"
-#include "third_party/boringssl/src/include/openssl/bytestring.h"
+#include <openssl/bytestring.h>
 
 namespace net {
 

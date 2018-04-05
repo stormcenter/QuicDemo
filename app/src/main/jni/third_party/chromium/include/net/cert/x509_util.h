@@ -15,8 +15,8 @@
 #include "base/strings/string_piece.h"
 #include "base/time/time.h"
 #include "net/base/net_export.h"
-#include "third_party/boringssl/src/include/openssl/base.h"
-#include "third_party/boringssl/src/include/openssl/pool.h"
+#include <openssl/base.h>
+#include <openssl/pool.h>
 
 namespace crypto {
 class RSAPrivateKey;

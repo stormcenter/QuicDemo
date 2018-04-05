@@ -6,7 +6,7 @@
 #define NET_QUIC_CORE_CRYPTO_SCOPED_EVP_AEAD_CTX_H_
 
 #include "base/macros.h"
-#include "third_party/boringssl/src/include/openssl/evp.h"
+#include <openssl/evp.h>
 
 namespace net {
 
