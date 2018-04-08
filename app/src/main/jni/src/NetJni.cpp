@@ -147,7 +147,23 @@ static void NetUtils_nativeQuicClient(JNIEnv* env, jclass, jstring host, jint po
         return;
     }
     LOGE("Connected to %s" , host_port.c_str());
+    string body = "";
+    SpdyHeaderBlock header_block;
+    header_block[":method"] = body.empty() ? "GET" : "POST";
+    header_block[":scheme"] = url.scheme();
+    header_block[":authority"] = url.host();
+    header_block[":path"] = url.path();
 
+    // Make sure to store the response, for later output.
+    client.set_store_response(true);
+
+    // Send the request.
+    client.SendRequestAndWaitForResponse(header_block, body, /*fin=*/true);
+
+    string response_body = client.latest_response_body();
+    if (!response_body.empty()) {
+        LOGI("response_body = %s", response_body.c_str());
+    }
 }
 
 void NativeInit() {

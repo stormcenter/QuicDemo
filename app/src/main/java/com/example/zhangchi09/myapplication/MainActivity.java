@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import org.chromium.net.CronetEngine;
+
+import org.chromium.base.BuildInfo;
+import org.chromium.base.ContextUtils;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -15,6 +17,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ContextUtils.initApplicationContext(getApplicationContext());
+        BuildInfo buildInfo = BuildInfo.getInstance();
+
         testButton = (Button) findViewById(R.id.testButton);
         testButton.setOnClickListener(this);
     }
