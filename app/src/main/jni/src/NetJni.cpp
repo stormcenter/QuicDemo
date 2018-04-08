@@ -6,7 +6,8 @@
 #include <android/log.h>
 
 #include <iostream>
-
+#include <base/android/jni_android.h>
+#include "base/android/jni_utils.h"
 #include "base/at_exit.h"
 #include "base/command_line.h"
 #include "base/logging.h"
@@ -75,6 +76,14 @@ static void NetUtils_nativeQuicClient(JNIEnv* env, jclass, jstring host, jint po
     LOGW("Port: %d\n", param_port);
     LOGW("Path: %s\n", param_path);
 
+//    logging::LoggingSettings settings;
+//    settings.logging_dest = logging::LOG_TO_SYSTEM_DEBUG_LOG;
+//    CHECK(logging::InitLogging(settings));
+
+
+    int32_t FLAGS_initial_mtu = 0;
+    bool FLAGS_version_mismatch_ok = false;
+
     base::AtExitManager exit_manager;
     base::MessageLoopForIO message_loop;
     net::QuicIpAddress ip_addr;
@@ -113,8 +122,38 @@ static void NetUtils_nativeQuicClient(JNIEnv* env, jclass, jstring host, jint po
             transport_security_state.get(), ct_verifier.get()));
 
     net::ParsedQuicVersionVector versions = net::AllSupportedVersions();
-    net::QuicSimpleClient client(net::QuicSocketAddress(ip_addr, port), server_id,
+    net::QuicSimpleClient client(net::QuicSocketAddress(ip_addr, param_port), server_id,
                                  versions, std::move(proof_verifier));
+    client.set_initial_max_packet_length(
+            FLAGS_initial_mtu != 0 ? FLAGS_initial_mtu : net::kDefaultMaxPacketSize);
+    if (!client.Initialize()) {
+        LOGE("Failed to initialize client.");
+        return;
+    }
+    LOGE("initialized ");
+
+    if (!client.Connect()) {
+        LOGE("Failed to connect to 1 %s",host_port.c_str());
+
+        net::QuicErrorCode error = client.session()->error();
+        if (FLAGS_version_mismatch_ok && error == net::QUIC_INVALID_VERSION) {
+            cout << "Server talks QUIC, but none of the versions supported by "
+                 << "this client: " << ParsedQuicVersionVectorToString(versions)
+                 << endl;
+            // Version mismatch is not deemed a failure.
+            return;
+        }
+        LOGE("Failed to connect to 2 %s",host_port.c_str());
+        return;
+    }
+    LOGE("Connected to %s" , host_port.c_str());
+
+}
+
+void NativeInit() {
+    if(!base::TaskScheduler::GetInstance()) {
+        base::TaskScheduler::CreateAndStartWithDefaultParams("quic_client");
+    }
 }
 
 int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMethod *nativeMethods, jint nMethods) {
@@ -138,11 +177,17 @@ void register_com_example_zhangchi09_myapplication_NetUtils(JNIEnv* env) {
 }
 // DalvikVM calls this on startup, so we can statically register all our native methods.
 jint JNI_OnLoad(JavaVM* vm, void*) {
-    JNIEnv* env;
+    base::android::InitVM(vm);
+    JNIEnv* env = base::android::AttachCurrentThread();
+
     if (vm->GetEnv(reinterpret_cast<void**>(&env), JNI_VERSION_1_6) != JNI_OK) {
         LOGE("JavaVM::GetEnv() failed");
         abort();
     }
+    NativeInit();
     register_com_example_zhangchi09_myapplication_NetUtils(env);
+
+    base::android::InitReplacementClassLoader(env,
+                                              base::android::GetClassLoader(env));
     return JNI_VERSION_1_6;
 }
