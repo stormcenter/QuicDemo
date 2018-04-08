@@ -30,6 +30,9 @@
 #include "net/spdy/chromium/spdy_http_utils.h"
 #include "net/spdy/core/spdy_header_block.h"
 #include "url/gurl.h"
+#include "tools/quic/quic_simple_client.h"
+#include "net/base/address_list.h"
+#include "tools/quic/synchronous_host_resolver.h"
 
 using net::CertVerifier;
 using net::CTPolicyEnforcer;
@@ -78,40 +81,40 @@ static void NetUtils_nativeQuicClient(JNIEnv* env, jclass, jstring host, jint po
 
     GURL url(param_path);
     string s_host = string(param_host);
-//    net::AddressList addresses;
-//    LOGE("ok1 %s",s_host.c_str());
-//    int rv = net::SynchronousHostResolver::Resolve(s_host, &addresses);
-//    if (rv != net::OK) {
-//        LOGE("Unable to resolve %s",param_host);
-//        return;
-//    }
-//    LOGE("ok2");
-//    ip_addr =
-//            net::QuicIpAddress(net::QuicIpAddressImpl(addresses[0].address()));
-//    LOGE("ok3");
-//    string host_port = net::QuicStrCat(ip_addr.ToString(), ":", port);
-//
-//    LOGE("host_port %s",host_port.c_str());
-//
-//    net::QuicServerId server_id(url.host(), url.EffectiveIntPort(),
-//                                net::PRIVACY_MODE_DISABLED);
-//
-//    std::unique_ptr<CertVerifier> cert_verifier(CertVerifier::CreateDefault());
-//    std::unique_ptr<TransportSecurityState> transport_security_state(
-//            new TransportSecurityState);
-//    std::unique_ptr<MultiLogCTVerifier> ct_verifier(new MultiLogCTVerifier());
-////    ct_verifier->AddLogs(net::ct::CreateLogVerifiersForKnownLogs());
-//    std::unique_ptr<CTPolicyEnforcer> ct_policy_enforcer(new CTPolicyEnforcer());
-//
-//
-//    std::unique_ptr<ProofVerifier> proof_verifier;
-//    proof_verifier.reset(new ProofVerifierChromium(
-//            cert_verifier.get(), ct_policy_enforcer.get(),
-//            transport_security_state.get(), ct_verifier.get()));
-//
-//    net::ParsedQuicVersionVector versions = net::AllSupportedVersions();
-//    net::QuicSimpleClient client(net::QuicSocketAddress(ip_addr, port), server_id,
-//                                 versions, std::move(proof_verifier));
+    net::AddressList addresses;
+    LOGE("ok1 %s",s_host.c_str());
+    int rv = net::SynchronousHostResolver::Resolve(s_host, &addresses);
+    if (rv != net::OK) {
+        LOGE("Unable to resolve %s",param_host);
+        return;
+    }
+    LOGE("ok2");
+    ip_addr =
+            net::QuicIpAddress(net::QuicIpAddressImpl(addresses[0].address()));
+    LOGE("ok3");
+    string host_port = net::QuicStrCat(ip_addr.ToString(), ":", port);
+
+    LOGE("host_port %s",host_port.c_str());
+
+    net::QuicServerId server_id(url.host(), url.EffectiveIntPort(),
+                                net::PRIVACY_MODE_DISABLED);
+
+    std::unique_ptr<CertVerifier> cert_verifier(CertVerifier::CreateDefault());
+    std::unique_ptr<TransportSecurityState> transport_security_state(
+            new TransportSecurityState);
+    std::unique_ptr<MultiLogCTVerifier> ct_verifier(new MultiLogCTVerifier());
+    ct_verifier->AddLogs(net::ct::CreateLogVerifiersForKnownLogs());
+    std::unique_ptr<CTPolicyEnforcer> ct_policy_enforcer(new CTPolicyEnforcer());
+
+
+    std::unique_ptr<ProofVerifier> proof_verifier;
+    proof_verifier.reset(new ProofVerifierChromium(
+            cert_verifier.get(), ct_policy_enforcer.get(),
+            transport_security_state.get(), ct_verifier.get()));
+
+    net::ParsedQuicVersionVector versions = net::AllSupportedVersions();
+    net::QuicSimpleClient client(net::QuicSocketAddress(ip_addr, port), server_id,
+                                 versions, std::move(proof_verifier));
 }
 
 int jniRegisterNativeMethods(JNIEnv* env, const char *classPathName, JNINativeMethod *nativeMethods, jint nMethods) {
