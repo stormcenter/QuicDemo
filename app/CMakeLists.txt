@@ -114,7 +114,10 @@ add_library( neteasenet
              ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_spdy_server_stream_base.cc
              ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_time_wait_list_manager.cc
              ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/stateless_rejector.cc
-             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/synchronous_host_resolver.cc)
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/synchronous_host_resolver.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_al_client.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_al_client_session.cc
+             ${PROJECT_SOURCE_DIR}/src/main/jni/src/tools/quic/quic_al_client_stream.cc)
 
 include_directories(${PROJECT_SOURCE_DIR}/src/main/jni/third_party/chromium/boringssl/src/include)
 

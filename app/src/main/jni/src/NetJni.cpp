@@ -8,6 +8,7 @@
 #include <iostream>
 #include <base/android/jni_android.h>
 #include "base/android/jni_utils.h"
+
 #include "base/at_exit.h"
 #include "base/command_line.h"
 #include "base/logging.h"
@@ -30,10 +31,10 @@
 #include "net/quic/platform/api/quic_text_utils.h"
 #include "net/spdy/chromium/spdy_http_utils.h"
 #include "net/spdy/core/spdy_header_block.h"
-#include "url/gurl.h"
-#include "tools/quic/quic_simple_client.h"
-#include "net/base/address_list.h"
+#include "tools/quic/quic_al_client.h"
 #include "tools/quic/synchronous_host_resolver.h"
+#include "url/gurl.h"
+
 
 using net::CertVerifier;
 using net::CTPolicyEnforcer;
@@ -122,7 +123,7 @@ static void NetUtils_nativeQuicClient(JNIEnv* env, jclass, jstring host, jint po
             transport_security_state.get(), ct_verifier.get()));
 
     net::ParsedQuicVersionVector versions = net::AllSupportedVersions();
-    net::QuicSimpleClient client(net::QuicSocketAddress(ip_addr, param_port), server_id,
+    net::QuicALClient client(net::QuicSocketAddress(ip_addr, param_port), server_id,
                                  versions, std::move(proof_verifier));
     client.set_initial_max_packet_length(
             FLAGS_initial_mtu != 0 ? FLAGS_initial_mtu : net::kDefaultMaxPacketSize);
@@ -147,23 +148,23 @@ static void NetUtils_nativeQuicClient(JNIEnv* env, jclass, jstring host, jint po
         return;
     }
     LOGE("Connected to %s" , host_port.c_str());
-    string body = "";
-    SpdyHeaderBlock header_block;
-    header_block[":method"] = body.empty() ? "GET" : "POST";
-    header_block[":scheme"] = url.scheme();
-    header_block[":authority"] = url.host();
-    header_block[":path"] = url.path();
+    string body = "hello";
+//    SpdyHeaderBlock header_block;
+//    header_block[":method"] = body.empty() ? "GET" : "POST";
+//    header_block[":scheme"] = url.scheme();
+//    header_block[":authority"] = url.host();
+//    header_block[":path"] = url.path();
 
     // Make sure to store the response, for later output.
-    client.set_store_response(true);
+    //client.set_store_response(true);
 
     // Send the request.
-    client.SendRequestAndWaitForResponse(header_block, body, /*fin=*/true);
+    client.SendRequestAndWaitForResponse(body, /*fin=*/true);
 
-    string response_body = client.latest_response_body();
-    if (!response_body.empty()) {
-        LOGI("response_body = %s", response_body.c_str());
-    }
+    //string response_body = client.latest_response_body();
+    //if (!response_body.empty()) {
+    //    LOGI("response_body = %s", response_body.c_str());
+    //}
 }
 
 void NativeInit() {
